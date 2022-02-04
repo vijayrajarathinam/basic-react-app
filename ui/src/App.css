@@ -1,0 +1,235 @@
+.App {
+  margin-top: 7rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding: 13px 17px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.2s linear, background-color 0.2s linear;
+}
+
+.btn-primary {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-danger:hover,
+.btn-danger:active {
+  filter: brightness(0.85);
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+a.button {
+  display: block;
+  width: 115px;
+  height: 22px;
+  background: #4e9caf;
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  text-decoration: none;
+}
+
+.button:focus,
+.button:active {
+  background: #4b7681;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+*,
+*:focus {
+  outline: none;
+}
+
+table {
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  width: 100%;
+  border-collapse: collapse;
+  color: #292929;
+}
+
+thead {
+  background: #f7f7f7;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+  border: none;
+}
+
+tbody tr {
+  border-bottom: 1px solid #efefef;
+}
+
+td {
+  padding: 10px;
+  border-right: 1px solid #efefef;
+}
+
+/*
+   * ==============================================
+   * Dot Elastic
+   * ==============================================
+   */
+
+.dot-elastic {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotElastic 1s infinite linear;
+}
+
+.dot-elastic::before,
+.dot-elastic::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-elastic::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotElasticBefore 1s infinite linear;
+}
+
+.dot-elastic::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotElasticAfter 1s infinite linear;
+}
+
+@keyframes dotElasticBefore {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1.5);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dotElastic {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1.5);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dotElasticAfter {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.form {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 150px;
+  font-family: sans-serif;
+  background: #fff;
+}
+.form-item {
+  position: relative;
+  margin-bottom: 15px;
+}
+.form-item input {
+  display: block;
+  width: 400px;
+  height: 40px;
+  background: transparent;
+  border: solid 1px #ccc;
+  transition: all 0.3s ease;
+  padding: 0 15px;
+}
+.form-item input:focus {
+  border-color: blue;
+}
+.form-item label {
+  position: absolute;
+  cursor: text;
+  z-index: 2;
+  top: 13px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  background: #fff;
+  padding: 0 10px;
+  color: #999;
+  transition: all 0.3s ease;
+}
+.form-item input:focus + label,
+.form-item input:valid + label {
+  font-size: 11px;
+  top: -5px;
+}
+.form-item input:focus + label {
+  color: blue;
+}
